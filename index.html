@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmX Cinema</title>
+    <link rel="icon" href="/public/icon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style>
+        [v-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div id="back-pic">
+<div id="app" v-cloak>
+    <a href="/">
+        <div id="title">
+            <img src="/public/logo.png">
+            <h1>FilmX Cinema</h1>
+        </div>
+    </a>
+    <keep-alive>
+        <router-view v-bind:genre="genre" v-bind:time="time" v-bind:movies="movies" v-bind:day="day"></router-view>
+    </keep-alive>
+</div>
+<script src="/dist/build.js"></script>
+<footer class="footer">
+    <div id="adress">
+        <h2><img src="public/map_mark32x32.png">Cinema Adress</h2>
+        <div class="footer-info">
+            <div><img src="public/map_mark16x16.png">adress#1</div>
+            <div><img src="public/map_mark16x16.png">adress#2</div>
+            <div><img src="public/map_mark16x16.png">adress#3</div>
+        </div>
+    </div>
+    <div id="booking">
+        <h2><img src="public/ticket32x32.png">Booking Contacts</h2>
+        <div class="footer-info">
+            <div><img src="public/phone16x16.png">Phone number#1</div>
+            <div><img src="public/phone16x16.png">Phone number#2</div>
+            <div><img src="public/phone16x16.png">Phone number#3</div>
+        </div>
+    </div>
+</footer></div>
+</body>
+</html>
